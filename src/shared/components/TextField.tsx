@@ -11,6 +11,15 @@ type textFieldProps = {
   name?: string,
 }
 
+/**
+ * TextField component that serves as an input field
+ * @param {object} textFieldProps props used for TextField component including
+ * - placeholder {string}: used as helper text when the input is empty
+ * - hasError {boolean}: control error style of the input
+ * - onChange {func}: callbakc when the value of input is changed
+ * - name {string}: used as name of input in case a label is available
+ * @returns {React.ReactElement} TextField
+ */
 const TextField = ({ placeholder, hasError = false, onChange = () => { }, name }: textFieldProps) => {
   const [value, setValue] = useState('');
 

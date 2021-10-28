@@ -11,6 +11,7 @@ import classes from './styles/RequestModal.scss';
 const URL = 'https://l94wc2001h.execute-api.ap-southeast-2.amazonaws.com/prod/fake-auth';
 
 const formFields = ['Full name', 'Email', 'Confirm email']
+
 const defaultFormData = {
   fullName: '',
   email: '',
@@ -28,6 +29,11 @@ interface formDataType {
   confirmEmail: string;
 }
 
+/**
+ * RequestModal component
+ * @param {object} requestModalProps modal props
+ * @returns {React.ReactElement} RequestModal
+ */
 const RequestModal = ({ visible = false, onClose }: requestModalProps) => {
   const [formData, setFormData] = useState<formDataType>(Object.create(defaultFormData));
   const [validationErrors, setValidationErrors] = useState({});
@@ -45,12 +51,17 @@ const RequestModal = ({ visible = false, onClose }: requestModalProps) => {
 
   const verifyFormData = useCallback(() => {
     const updatedValidationErrors: any = {};
+    // name should not be empty
+    // not doing a strict formatting for name in case people
+    // don't want to use a real name
     if (!formData.fullName) {
       updatedValidationErrors.fullName = true;
     }
+    // email should be in valid format
     if (!formData.email || !validateEmail(formData.email)) {
       updatedValidationErrors.email = true;
     }
+    // confirm email should be in valid format and be the same as email
     if (!formData.confirmEmail || !validateEmail(formData.confirmEmail) || formData.confirmEmail !== formData.email) {
       updatedValidationErrors.confirmEmail = true;
     }
@@ -67,14 +78,16 @@ const RequestModal = ({ visible = false, onClose }: requestModalProps) => {
       const { fullName: name, email } = formData;
       request({ data: { name, email } })
         .then(() => {
+          // reset request data on success
           setShowSecondaryModal(true);
           setFormData(Object.create(defaultFormData));
           setValidationErrors({});
         })
         .catch(err => console.log(err));
     }
-  }, [request, formData]);
+  }, [request, formData, verifyFormData]);
 
+  // reset the visibility of the secondary modal on close
   const closeModal = () => {
     onClose();
     setShowSecondaryModal(false);

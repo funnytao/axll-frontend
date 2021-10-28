@@ -5,6 +5,10 @@ import RequestModal from './RequestModal';
 
 import classes from './styles/MainContent.scss';
 
+/**
+ * MainContent component showed in the app
+ * @returns {React.ReactElement} MainContent
+ */
 const MainContent = () => {
   const [modalVisible, setModalVisible] = useState(false);
 

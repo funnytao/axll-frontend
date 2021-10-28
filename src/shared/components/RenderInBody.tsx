@@ -5,6 +5,12 @@ type renderInBodyProps = {
   children: any
 }
 
+/**
+ * HOC that renders the children outside the current document area
+ * and append it to the body
+ * @param {object} renderInBodyProps only the children will be used
+ * @returns {React.ReactElement} RnederInBody
+ */
 const RenderInBody = ({ children }: renderInBodyProps) => {
   const [container, setContainer] = useState(null);
 

@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 import axios, { AxiosError } from 'axios';
 
 type baseConfigProps = {
@@ -7,6 +7,11 @@ type baseConfigProps = {
   data?: object
 }
 
+/**
+ * Hook that returns an axios promise with given config
+ * @param baseConfig config used for axios
+ * @returns {object} including data, loading state, error and the request instance
+ */
 const useRequest = (baseConfig: baseConfigProps) => {
   const [data, setData] = useState();
   const [error, setError] = useState<AxiosError>();
