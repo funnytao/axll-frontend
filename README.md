@@ -1,22 +1,23 @@
-# Airwallex Take-home Project
+# Axll Frontend Project
 
-An application that allow users subscribe to news when the service is available.
+An application that allows users subscribe to news when the service is available.
 
 ## Description
 
 This project is built with React + TypeScript. The folder structure is shown below:
 * src
-    * app (the main page of the project)
-    * components (components used in the main page)
-        * assets (static files like background image)
-        * styles (scss files)
-        * tests (unit tests)
-    * shared (universal components and functions that could be reused)
-        * components
-            * styles
-            * tests
-        * utils
-            * tests
+  * app (the main page of the project)
+    * tests
+  * components (components used in the main page)
+    * assets (static files like background image)
+    * styles (scss files)
+    * tests (unit tests)
+  * shared (universal components and functions that could be reused)
+    * components
+      * styles
+      * tests
+    * utils
+      * tests
 
 ## Getting Started
 
@@ -45,4 +46,4 @@ npm run build
 
 * Live Demo
 
-https://codesandbox.io/s/mystifying-pond-usmon?file=/src/index.tsx
+https://codesandbox.io/s/blazing-surf-cqlnd
