@@ -1,6 +1,5 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const MiniCssExractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: "development",
@@ -24,7 +23,8 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     "style-loader",
-                    "css-loader"
+                    "css-loader",
+                    "postcss-loader"
                 ]
             },
             {
@@ -40,6 +40,7 @@ module.exports = {
                         }
                     },
                     "sass-loader",
+                    "postcss-loader"
                 ]
             }
         ]
@@ -60,9 +61,8 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "src/index.html",
-            hash: true, // This is useful for cache busting
+            hash: true,
             filename: 'index.html'
         }),
-        // new MiniCssExractPlugin(),
     ]
 }
