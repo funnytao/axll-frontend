@@ -1,54 +1,54 @@
 .header {
-    color: #1a1d21;
-    font-weight: 500;
-    font-size: 20px;
-    font-style: italic;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 12px;
-    position: relative;
-    margin-bottom: 32px;
+  color: #1a1d21;
+  font-weight: 500;
+  font-size: 20px;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 12px;
+  position: relative;
+  margin-bottom: 32px;
 
-    &::after {
-        content: '';
-        width: 40px;
-        background-color: black;
-        height: 1px;
-        position: absolute;
-        bottom: 0;
-    }
+  &::after {
+    content: '';
+    width: 40px;
+    background-color: black;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 .button {
-    margin-top: 24px;
-    padding: 8px;
-    background: white;
-    border-radius: 2px;
-    border: 1px solid black;
-    cursor: pointer;
-    height: 36px;
+  margin-top: 24px;
+  padding: 8px;
+  background: white;
+  border-radius: 2px;
+  border: 1px solid black;
+  cursor: pointer;
+  height: 36px;
 
-    &:hover {
-        background-color: #f6f7f8;
-    }
+  &:hover {
+    background-color: #f6f7f8;
+  }
 
-    &:active {
-        background-color: white;
-    }
+  &:active {
+    background-color: white;
+  }
 
-    &:disabled {
-        cursor: not-allowed;
-    }
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 .errorMessage {
-    font-style: italic;
-    margin-top: 16px;
-    text-align: center;
-    font-size: 14px;
+  font-style: italic;
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
 }
 
 .successMessage {
-    font-size: 14px;
-    text-align: center;
+  font-size: 14px;
+  text-align: center;
 }

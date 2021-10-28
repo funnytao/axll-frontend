@@ -6,6 +6,6 @@ require('./styles.css');
 import App from "./app/App";
 
 render(
-    <App />,
-    document.getElementById("root")
+  <App />,
+  document.getElementById("root")
 );

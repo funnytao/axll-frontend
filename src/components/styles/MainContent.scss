@@ -1,43 +1,43 @@
 .bgImage {
-    background-repeat: no-repeat;
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/bg.jpg');
+  background-repeat: no-repeat;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/bg.jpg');
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    z-index: 1;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  z-index: 1;
+  color: white;
 
-    .header {
-        font-size: 36px;
-        text-align: center;
-        letter-spacing: 2px;
-        margin: 0;
+  .header {
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+
+  .button {
+    margin-top: 24px;
+    padding: 12px;
+    background: white;
+    border-radius: 2px;
+    border: 1px solid black;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f6f7f8;
     }
 
-    .button {
-        margin-top: 24px;
-        padding: 12px;
-        background: white;
-        border-radius: 2px;
-        border: 1px solid black;
-        cursor: pointer;
-
-        &:hover {
-            background-color: #f6f7f8;
-        }
-
-        &:active {
-            background-color: white;
-        }
+    &:active {
+      background-color: white;
     }
+  }
 }

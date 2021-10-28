@@ -3,12 +3,12 @@ import * as React from 'react';
 import classes from './styles/Modal.scss';
 
 type overlayProps = {
-    visible: boolean
+  visible: boolean
 }
 
 const Overlay = ({ visible }: overlayProps) =>
-    visible && (
-        <div className={classes.overlay} />
-    );
+  visible && (
+    <div className={classes.overlay} />
+  );
 
 export default Overlay;
