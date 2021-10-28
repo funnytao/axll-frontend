@@ -1,6 +1,6 @@
 # Axll Frontend Project
 
-An application that allows users subscribe to news when the service is available.
+An application that allows users to subscribe to news when the service is available.
 
 ## Description
 
