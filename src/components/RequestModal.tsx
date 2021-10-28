@@ -51,10 +51,10 @@ const RequestModal = ({ visible = false, onClose }: requestModalProps) => {
 
   const verifyFormData = useCallback(() => {
     const updatedValidationErrors: any = {};
-    // name should not be empty
+    // name should not be empty or less than 3 characters
     // not doing a strict formatting for name in case people
     // don't want to use a real name
-    if (!formData.fullName) {
+    if (formData.fullName?.length < 3) {
       updatedValidationErrors.fullName = true;
     }
     // email should be in valid format
